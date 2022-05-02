@@ -1,0 +1,5 @@
+#!/bin/sh
+killall tint2
+sed -i 's/autohide = 1/autohide = 0/g' ~/.config/tint2/tint2rc
+tint2 &
+tint2 -c ~/.config/tint2/clock.tint2rc &

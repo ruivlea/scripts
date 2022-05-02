@@ -1,0 +1,3 @@
+#!/bin/sh
+sed -i 's/autohide="off"/autohide="on"/g' ~/.jwmrc
+jwm -restart

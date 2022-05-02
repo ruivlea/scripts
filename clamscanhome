@@ -1,0 +1,2 @@
+#!/bin/sh
+clamscan --recursive --infected --remove --max-filesize=4000M --max-scansize=4000M -l ~/clamscan.log /home/$USER

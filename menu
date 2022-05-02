@@ -1,0 +1,37 @@
+#!/bin/sh
+choices="Terminal
+Firefox rui
+Firefox alt
+Albion Online
+File Manager
+Inkscape
+Spreadsheet
+Word Processor
+Presentation
+Text Editor
+Handbrake
+Lockscreen
+Logout
+Sleep
+Reboot
+Poweroff"
+
+chosen=$(echo -e "$choices" | dmenu -i -l 15 -b -z 150 -fn FreeSans-11)
+
+case "$chosen" in
+	Terminal) st -e scroll /bin/bash ;;
+	"Firefox rui") firefox -P ruivlea ;;
+	"Firefox alt") firefox -P alt ;;
+	"Albion Online") __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia ~/albiononline/Albion-Online ;;
+	"File Manager") pcmanfm-qt ;;
+	"Spreadsheet") localc ;;
+	"Word Processor") lowriter ;;
+	"Presentation") loimpress ;;
+	"Text Editor") st -e nvim ;;
+	"Handbrake") ghb ;;
+	"Lockscreen") i3lock -c 000000; xset dpms force off ;;
+	"Logout") jwm -exit ;;
+	"Sleep") loginctl suspend ;;
+	"Reboot") loginctl reboot ;;
+	"Poweroff") loginctl poweroff ;;
+esac

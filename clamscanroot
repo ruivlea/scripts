@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo clamscan --recursive --infected --remove --max-filesize=4000M --max-scansize=4000M -l /root/clamscan.log --exclude-dir='^/sys|^/dev' /
