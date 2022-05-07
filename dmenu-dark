@@ -1,0 +1,2 @@
+#!/bin/sh
+dmenu_run -nb '#2c2c2c' -nf '#ffffff' -sb '#222020' -sf '#ffffff'
